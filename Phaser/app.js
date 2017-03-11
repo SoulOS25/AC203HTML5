@@ -18,6 +18,10 @@ function create() {
 	ledge.body.immovable=true;
 	var ledge=platforms.create(400,400,'ground');
 	ledge.body.immovable=true;
+	player=game.add.sprite(32,world.height-150,'dude')
+	player.animations.add('left',[0,1,2,3],10,true)
+	player.animations.add('right',[5,6,7,8],10,true)
+}
 }
 
 function update() {
