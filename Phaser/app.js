@@ -19,7 +19,6 @@ function create() {
 	var ledge=platforms.create(400,400,'ground');
 	ledge.body.immovable=true;
 }
-}
 
 function update() {
 }
