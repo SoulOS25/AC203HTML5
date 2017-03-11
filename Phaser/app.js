@@ -13,6 +13,13 @@ function create() {
 	platforms.enableBody=true;
 	var ground=platforms.create(0,game.world.height-50,'ground');
 	ground.scale.setTo(2,2);
+	ground.body.immovable=true;
+	var ledge=platforms.create(-150,250,'ground');
+	ledge.body.immovable=true;
+	ledge.body.immovable=true;
+	var ledge=platforms.create(-150,250,'ground');
+	ledge.body.immovable=true;
+}
 }
 
 function update() {
