@@ -38,4 +38,9 @@ function update() {
 		player.body.velocity.x=150;
 		player.animations.play('right')
 	}
+	else{
+		player.body.velocity.x=0;
+		player.animations.stop();
+		player.frame=4;
+	}
 }
