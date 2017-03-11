@@ -24,6 +24,7 @@ function create() {
 	game.physics.arcade.enable(player);
 	player.body.bounce.y=0.2;
 	player.body.gravity.y=300;
+	player.body.collideWorldBounds=true;
 }
 
 function update() {
