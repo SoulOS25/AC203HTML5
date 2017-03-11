@@ -25,8 +25,15 @@ function create() {
 	player.body.bounce.y=0.2;
 	player.body.gravity.y=300;
 	player.body.collideWorldBounds=true;
+	cursors=game.input,keyboard.createCursorKeys();
 }
 
 function update() {
 	game.physics.arcade.collide(player,platforms)
+	if(cursors.left.isDown){
+		player.body.velocity.x=-150;
+	}
+	else if(cursors.right.isDown){
+		player.body.velocity.x=150;
+	}
 }
