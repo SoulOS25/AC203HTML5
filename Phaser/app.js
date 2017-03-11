@@ -28,4 +28,5 @@ function create() {
 }
 
 function update() {
+	game.physics.arcade.collide(player,platforms)
 }
