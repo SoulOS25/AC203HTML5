@@ -7,7 +7,8 @@ function preload() {
 	game.load.spritesheet('baddie',"assets/baddie.png",32,32);
 }
 function create() {
-	game.add.sprite(0,0,'ground');
+	game.physics.startSystem(Phaser.Physics.ARCADE)
+	game.add.sprite(0,0,'sky');
 }
 
 function update() {
