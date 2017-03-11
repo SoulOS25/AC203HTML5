@@ -11,7 +11,8 @@ function create() {
 	game.add.sprite(0,0,'sky');
 	platforms=game.add.group();
 	platforms.enableBody=true;
-	var ground=platforms.create(0,game.world.height-50,'ground')
+	var ground=platforms.create(0,game.world.height-50,'ground');
+	ground.scale.setTo(2,2);
 }
 
 function update() {
