@@ -7,7 +7,8 @@ function preload() {
 	game.load.spritesheet('baddie',"assets/baddie.png"32,32)
 }
 function create() {
-	game.add.sprite(0,0,'star')
+	game.add.sprite(0,0,'star');
 }
+
 function update() {
 }
