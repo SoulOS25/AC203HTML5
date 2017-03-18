@@ -37,6 +37,7 @@ function create() {
 
 function update() {
 	game.physics.arcade.collide(player,platforms)
+	game.physics.arcade.collide(stars,platforms)
 	if(cursors.left.isDown){
 		player.body.velocity.x=-150;
 		player.animations.play('left')
