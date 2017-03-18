@@ -1,4 +1,6 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game=new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var score=0;
+var scoreText;
 function preload() {
 	game.load.image('sky',"assets/sky.png");
 	game.load.image('star',"assets/star.png");
@@ -58,5 +60,6 @@ function update() {
 	}
 	function collectStar(player,star){
 		star.kill();
+		score+=10;
 	}
 }
