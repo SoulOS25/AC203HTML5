@@ -56,7 +56,7 @@ function update() {
 		player.frame=4;
 	}
 	if(cursors.up.isDown&&player.body.touching.down){
-		player.body.velocity.y=-300;
+		player.body.velocity.y=-350;
 	}
 	function collectStar(player,star){
 		star.kill();
