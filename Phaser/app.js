@@ -36,15 +36,16 @@ function create() {
 }
 
 function update() {
-	game.physics.arcade.collide(player,platforms)
-	game.physics.arcade.collide(stars,platforms)
+	game.physics.arcade.collide(player,platforms);
+	game.physics.arcade.collide(stars,platforms);
+	game.physics.arcade.collide(player,stars,collectStar,null,this);
 	if(cursors.left.isDown){
 		player.body.velocity.x=-150;
-		player.animations.play('left')
+		player.animations.play('left');
 	}
 	else if(cursors.right.isDown){
 		player.body.velocity.x=150;
-		player.animations.play('right')
+		player.animations.play('right');
 	}
 	else{
 		player.body.velocity.x=0;
@@ -53,5 +54,8 @@ function update() {
 	}
 	if(cursors.up.isDown&&player.body.touching.down){
 		player.body.velocity.y=-300;
+	}
+	function collectStar(player,star){
+		star.kill();
 	}
 }
