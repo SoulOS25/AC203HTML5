@@ -38,7 +38,7 @@ function create() {
 function update() {
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(stars,platforms);
-	game.physics.arcade.collide(player,stars,collectStar,null,this);
+	game.physics.arcade.overlap(player,stars,collectStar,null,this);
 	if(cursors.left.isDown){
 		player.body.velocity.x=-150;
 		player.animations.play('left');
